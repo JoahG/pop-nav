@@ -28,11 +28,35 @@ $(document).ready(function() {
 	// console.log($d);
 
 	$("a[href^=#]").click(function(e) {
-		e.preventDefault()
+		e.preventDefault();
+
+		sta = $(this);
+		end = $($(this).attr("href"));
+
+		xs = Math.round(sta.offset().top);
+		xe = Math.round(end.offset().top);
+
+		ys = Math.round(sta.offset().left);
+		ye = Math.round(end.offset().left);
+
+		end.animate({
+			left: ys
+		});
+
+		sta.animate({
+			left: ys - ye
+		})
+
+
 		$("html,body").animate({
-			scrollTop: Math.round($($(this).attr("href")).offset().top)
+			scrollTop:  Math.round(xe)
 		}, 500)
+
 	})
+
+	if (window.location.hash) {
+	  $("a[href="+window.location.hash+"]").click()
+	}
 
 });
 
