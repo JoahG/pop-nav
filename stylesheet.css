@@ -3,8 +3,20 @@ body {
 	color: #222;
 }
 
-h1 {
+a {
+	display: block;
+	font-size: 40px;
 	border: 1px solid #333;
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #111;
+}
+
+a:visited {
+	color: #333;
 }
 
 .container, .overlay {
@@ -27,11 +39,9 @@ h1 {
 }
 
 .dot {
-	top: 0;
-	left: 0;
+	position: absolute;
 	background-color: #3cf;
 	border-radius: 100%;
-	position: absolute;
 	z-index: -1;
 	opacity: 0.5;
 }
@@ -47,12 +57,12 @@ h1 {
 	width: 140px;
 }
 
-#point-one {
+#point-one, #one {
 	top: 5%;
 	left: 10%;
 }
 
-#point-two {
+#point-two, #two {
 	top: 30%;
 	right: 10%;
 }
