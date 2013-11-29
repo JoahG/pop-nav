@@ -1,0 +1,41 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	color: #222;
+}
+
+h1 {
+	border: 1px solid #333;
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 200%;
+	width: 100%;
+}
+
+.dot {
+	top: 0;
+	left: 0;
+	background-color: #3cf;
+	border-radius: 100%;
+	position: absolute;
+	z-index: -1;
+}
+
+#point-one, #point-two, .dot {
+	position: absolute;
+	height: 140px;
+	width: 140px;
+}
+
+#point-one {
+	top: 5%;
+	left: 10%;
+}
+
+#point-two {
+	top: 30%;
+	right: 10%;
+}
